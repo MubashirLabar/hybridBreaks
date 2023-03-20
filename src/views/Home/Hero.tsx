@@ -2,7 +2,7 @@ import { PlayIcon } from "assets/icons";
 const Hero = () => {
   return (
     <div className="w-full flex flex-col relative">
-      <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[620px] xl:h-[800px]">
+      <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[620px] xl:h-[800px] bg-foreground-700">
         <video
           muted
           loop
