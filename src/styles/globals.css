@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary-700: 24, 160, 251;
+    --color-primary-500: 13, 140, 225;
+
+    --color-service-text-700: 0, 0, 0;
+    --color-service-text-500: 0, 0, 0, 0.8;
+    --color-service-text-300: 71, 103, 136;
+
+    --color-border-700: 231, 237, 246;
+
+    --color-foreground-700: 229, 229, 229;
+
+    --color-overlay-700: rgba(0, 0, 0, 0.05);
+  }
+
+  body,
+  button,
+  input,
+  a {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  *,
+  ::before,
+  ::after {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    user-select: none;
+  }
+}
+
+@layer components {
+  * {
+    @apply scroll-py-[48px];
+  }
+}
+
+@layer utilities {
+  .margins {
+    @apply px-6 xl:px-8 2xl:px-12;
+  }
+
+  .animation {
+    @apply duration-300 transition-all;
+  }
+
+  .animation-2 {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    transition-duration: 500ms;
+    -webkit-transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  .animation-3 {
+    transition: all 0.3s cubic-bezier(0, 0, 0.1, 1.08) 0s;
+  }
+
+  .button,
+  .button-primary {
+    @apply flex flex-row justify-center items-center relative
+    min-h-[48px] py-[10px] px-[16px] rounded-[7px]
+    border-[1px] border-transparent bg-primary-700 hover:bg-primary-500
+    text-[15px] 2xl:text-[16px] font-[500] text-white text-center
+    leading-[1.6] cursor-pointer
+    duration-300 transition-all;
+  }
+
+  .button-primary-hollow {
+    @apply flex flex-row justify-center items-center relative
+    min-h-[48px] py-[10px] px-[16px] rounded-[7px]
+    border-[1.5px] border-primary-700 bg-transparent
+    text-[15px] font-[500] text-primary-700 text-center
+    leading-[1.6] tracking-[-0.015em] cursor-pointer
+    duration-300 transition-all;
+  }
+
+  .hideScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hideScroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .bg-image {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    @apply bg-foreground-700;
+  }
+
+  .hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header-sidebar {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    transition-duration: 500ms;
+    -webkit-transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    right: calc(-100% + -200px);
+  }
+
+  .header-sidebar.expend {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .header-sidebar .wrapper {
+    position: relative;
+    background: white;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0, 0, 0.1, 1.08) 0s;
+    padding: 0px 24px;
+  }
+}
