@@ -24,9 +24,11 @@ function Partners() {
             {[...Array(6)].map((_, index) => (
               <div
                 key={index}
-                className="w-full h-[48px] sm:h-[60px] xl:h-[75px] border-[1px] border-solid border-foreground-700 bg-foreground-700 flex items-center justify-center"
+                className="w-full h-[48px] sm:h-[60px] xl:h-[75px] border-[1px] border-solid border-secondary-700 bg-secondary-700 flex items-center justify-center"
               >
-                <div className="tex-[18px] sm:text-[20px]">Logo</div>
+                <div className="tex-[18px] sm:text-[20px] text-service-700">
+                  Logo
+                </div>
               </div>
             ))}
           </div>

@@ -1,7 +1,7 @@
 @tailwind utilities;
 @layer utilities {
   .text-title-1 {
-    @apply text-service-700 
+    @apply text-service-700 font-[500]
     text-[30px] sm:text-[38px] lg:text-[48px] 
     leading-[43px] sm:leading-[60px] 2xl:leading-[72px] 
     tracking-[-0.015em];

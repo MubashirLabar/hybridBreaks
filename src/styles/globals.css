@@ -4,14 +4,20 @@
 
 @layer base {
   :root {
-    --color-primary-700: 24, 160, 251;
-    --color-primary-500: 13, 140, 225;
+    --color-primary-700: 59, 93, 207;
+    --color-primary-500: 86, 123, 245;
+    --color-primary-300: 110, 143, 251;
 
-    --color-service-text-700: 0, 0, 0;
-    --color-service-text-500: 0, 0, 0, 0.8;
-    --color-service-text-300: 71, 103, 136;
+    --color-secondary-700: 17, 17, 18;
+    --color-secondary-500: 34, 34, 39;
+    --color-secondary-300: 52, 52, 63;
 
-    --color-border-700: 231, 237, 246;
+    --color-service-bg: 0, 0, 5;
+
+    --color-service-text-700: 246, 248, 255;
+    --color-service-text-500: 187, 187, 187;
+
+    --color-border-700: 52, 52, 63;
 
     --color-foreground-700: 229, 229, 229;
 
@@ -50,6 +56,10 @@
   }
 
   .animation-2 {
+    transition: all 0.3s cubic-bezier(0, 0, 0.1, 1.08) 0s;
+  }
+
+  .animation-3 {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -59,25 +69,21 @@
     -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   }
 
-  .animation-3 {
-    transition: all 0.3s cubic-bezier(0, 0, 0.1, 1.08) 0s;
-  }
-
   .button,
   .button-primary {
-    @apply flex flex-row justify-center items-center relative
-    min-h-[48px] py-[10px] px-[16px] rounded-[7px]
-    border-[1px] border-transparent bg-primary-700 hover:bg-primary-500
+    @apply outline-none flex flex-row justify-center items-center relative
+    min-h-[50px] py-[10px] px-[18px] rounded-[7px]
+    border-[1px] border-transparent bg-primary-700 hover:bg-primary-300
     text-[15px] 2xl:text-[16px] font-[500] text-white text-center
     leading-[1.6] cursor-pointer
     duration-300 transition-all;
   }
 
   .button-primary-hollow {
-    @apply flex flex-row justify-center items-center relative
-    min-h-[48px] py-[10px] px-[16px] rounded-[7px]
+    @apply outline-none flex flex-row justify-center items-center relative
+    min-h-[50px] py-[10px] px-[16px] rounded-[7px]
     border-[1.5px] border-primary-700 bg-transparent
-    text-[15px] font-[500] text-primary-700 text-center
+    text-[15px] font-[500] text-service-700 text-center
     leading-[1.6] tracking-[-0.015em] cursor-pointer
     duration-300 transition-all;
   }
@@ -108,37 +114,5 @@
   .show {
     opacity: 1;
     visibility: visible;
-  }
-  .header-sidebar {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(10px);
-    display: flex;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    transition-duration: 500ms;
-    -webkit-transition-duration: 500ms;
-    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-    -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-    right: calc(-100% + -200px);
-  }
-
-  .header-sidebar.expend {
-    right: 0;
-    opacity: 1;
-    visibility: visible;
-  }
-  .header-sidebar .wrapper {
-    position: relative;
-    background: white;
-    height: 100%;
-    width: 100%;
-    transition: all 0.3s cubic-bezier(0, 0, 0.1, 1.08) 0s;
-    padding: 0px 24px;
   }
 }

@@ -39,10 +39,16 @@ module.exports = {
           500: withOpacity("--color-primary-500"),
           300: withOpacity("--color-primary-300"),
         },
+        secondary: {
+          700: withOpacity("--color-secondary-700"),
+          500: withOpacity("--color-secondary-500"),
+          300: withOpacity("--color-secondary-300"),
+        },
         service: {
           700: withOpacity("--color-service-text-700"),
           500: withOpacity("--color-service-text-500"),
-          300: withOpacity("--color-service-text-300"),
+
+          bg: withOpacity(" --color-service-bg"),
         },
         foreground: {
           700: withOpacity("--color-foreground-700"),

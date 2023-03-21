@@ -18,7 +18,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         ></link>
       </Head>
-      <Component {...pageProps} />
+      <div className="bg-service-bg">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

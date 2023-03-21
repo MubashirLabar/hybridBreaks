@@ -39,7 +39,7 @@ function Header() {
 
   return (
     <>
-      <div className="w-full margins flex items-center justify-center bg-white border-b-[1px] border-solid border-border-700 h-[80px] xl:h-[96px] sticky top-0 left-0 right-0 z-[999]">
+      <div className="w-full margins flex items-center justify-center bg-service-bg border-b-[1px] border-solid border-border-700 h-[80px] xl:h-[96px] sticky top-0 left-0 right-0 z-[999]">
         <div className="w-full max-w-8xl flex items-center">
           <div className="flex-1 flex items-center">
             <Link href={routes.home}>
@@ -65,7 +65,7 @@ function Header() {
               Connect Wallet
             </button>
             <button
-              className="h-7 w-7 text-service-500 flex xl:hidden"
+              className="h-7 w-7 text-service-700 flex xl:hidden"
               onClick={() => setExpend(!expend)}
             >
               <MenuIcon />
@@ -75,8 +75,15 @@ function Header() {
       </div>
 
       {/* For Desktop| Tablet | Mobile Screen */}
-      <div className={`header-sidebar ${expend ? "expend" : ""}`}>
-        <div className="wrapper relative">
+      <div
+        className={`bg-service-bg fixed inset-0 z-[1000] flex backdrop-blur-[10px] animation-3 hide ${
+          expend ? "show expend" : ""
+        }`}
+        style={{
+          right: `${expend ? "0px" : `calc(-100% + -200px)`}`,
+        }}
+      >
+        <div className="w-full h-full bg-service-bg relative margins animation-2">
           <div className="w-full flex items-center h-[80px] absolute left-0 right-0 margins">
             <div className="flex-1 flex items-center">
               <Link href={routes.home}>
