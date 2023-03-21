@@ -110,7 +110,7 @@ function Footer() {
               {socialLinks.map((item, index) => (
                 <div
                   key={index}
-                  className="h-8 lg:h-10 w-8 lg:w-10 rounded-full flex items-center justify-center bg-foreground-700 cursor-pointer animation hover:bg-primary-700 hover:text-white"
+                  className="h-8 lg:h-10 w-8 lg:w-10 rounded-full flex items-center justify-center text-service-700 bg-secondary-500 cursor-pointer animation hover:bg-primary-700 hover:text-service-700"
                 >
                   <div className="h-[18px] lg:h-[21px] w-[18px] lg:w-[21px]">
                     {item.icon}

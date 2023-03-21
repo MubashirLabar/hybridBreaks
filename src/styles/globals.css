@@ -38,6 +38,13 @@
     text-rendering: optimizelegibility;
     user-select: none;
   }
+
+  button,
+  div,
+  input,
+  a {
+    outline: none;
+  }
 }
 
 @layer components {
