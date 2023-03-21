@@ -33,16 +33,22 @@ function OurTeam() {
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-[40px] xl:gap-[60px]">
           {ourTeam.map((user, idx) => (
-            <div key={idx} className="w-full max-w-full flex flex-col">
+            <div
+              key={idx}
+              className="w-full max-w-full flex flex-col items-center justify-center"
+            >
               <div
-                className="bg-image !h-[60px] lg:!h-[80px] !w-[60px] lg:!w-[80px] rounded-full mb-4 sm:mb-[20px] lg:mb-[32px]"
+                className="bg-image rounded-full
+                !h-[80px] lg:!h-[120px] 
+                !w-[80px] lg:!w-[120px] 
+                mb-4 sm:mb-[20px] lg:mb-[32px]"
                 style={{ backgroundImage: `url(${user.image})` }}
               />
-              <div className="text-title-3">{user.name}</div>
-              <div className="text-body-3 my-4 sm:my-[20px] lg:my-6">
+              <div className="text-title-3 text-center">{user.name}</div>
+              <div className="text-body-3 my-4 sm:my-[20px] lg:my-6 text-center">
                 {user.about}
               </div>
-              <div className="text-body-3 !text-primary-700 font-[500] animation hover:underline cursor-pointer">
+              <div className="text-body-3 !text-primary-700 font-[500] animation hover:underline cursor-pointer text-center">
                 Learn more
               </div>
             </div>
